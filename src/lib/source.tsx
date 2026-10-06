@@ -12,7 +12,7 @@ import { type ReactNode } from 'react'
 
 export const docsConfig = {
 	title: 'R+B 玩机教程站',
-	baseUrl: 'https://root.oom-wg.dev',
+	baseUrl: 'https://root.wiki.gal.tf',
 	authors: [
 		{ name: 'ShIroRRen', url: 'https://shiror.ren' },
 		{ name: 'R+B 玩机乐园', url: 'https://realme.gtrom.eu.org' }
@@ -110,7 +110,7 @@ export const docsConfig = {
 		copyright: ReactNode
 	},
 	git: {
-		user: 'OOM-WG',
+		user: 'ShIroYing',
 		repo: 'RPB-Docs',
 		branch: 'shiror.ren'
 	} satisfies {

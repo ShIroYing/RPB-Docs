@@ -1,9 +1,10 @@
 'use client'
-import { create } from '@orama/orama'
+
 import { stopwords as englishStopwords } from '@orama/stopwords/english'
 import { stopwords as mandarinStopwords } from '@orama/stopwords/mandarin'
 import { createTokenizer } from '@orama/tokenizers/mandarin'
 import { useDocsSearch } from 'fumadocs-core/search/client'
+import { staticClient } from 'fumadocs-core/search/client/orama-static'
 import {
 	SearchDialog,
 	SearchDialogClose,
@@ -15,8 +16,9 @@ import {
 	SearchDialogOverlay,
 	type SharedProps
 } from 'fumadocs-ui/components/dialog/search'
+import { create } from 'zbsearch'
 
-const initOrama = (_loc?: string) =>
+const initDB = (_loc?: string) =>
 	create({
 		schema: { _: 'string' },
 		components: {
@@ -30,9 +32,7 @@ const initOrama = (_loc?: string) =>
 
 export default (props: SharedProps) => {
 	const { search, setSearch, query } = useDocsSearch({
-		type: 'static',
-		initOrama,
-		from: '/._search.json'
+		client: staticClient({ from: '/search-data.json', initDB })
 	})
 	return (
 		<SearchDialog search={search} onSearchChange={setSearch} isLoading={query.isLoading} {...props}>

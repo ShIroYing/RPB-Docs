@@ -8,7 +8,7 @@ import SearchDialog from '@/widgets/ui/search'
 
 import './global.css'
 
-const ubuntu = Ubuntu_Sans({ weight: ['300', '400', '500', '700'] })
+const ubuntu = Ubuntu_Sans()
 
 export default ({ children }: LayoutProps<'/'>) => (
 	<html lang='zh-Hans' className={ubuntu.className} suppressHydrationWarning>
@@ -71,6 +71,6 @@ export const metadata = {
 		}
 	},
 	verification: {
-		other: { 'baidu-site-verification': 'codeva-4jIuP1Zq6x' }
+		other: { 'baidu-site-verification': 'codeva-DomsU5Wadg' }
 	}
 } satisfies Metadata

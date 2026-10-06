@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"lib": ["dom", "dom.iterable", "esnext"],
-		"types": ["@types/mdx", "node", "react", "react-dom"],
+		"types": ["node", "react", "react-dom", "mdx"],
 		"module": "esnext",
 		"moduleResolution": "bundler",
 		"allowJs": true,
