@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: root.wiki.gal.tf
+Sitemap: https://root.wiki.gal.tf/sitemap.xml
